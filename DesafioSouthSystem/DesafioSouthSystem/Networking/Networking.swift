@@ -13,7 +13,7 @@ class Networking {
     
     func fetchPopularMovies(completion: @escaping (Result<[Movie], Error>) -> ()) {
         
-        let urlString = API.API_POPULAR_MOVIES
+        let urlString = API.API_POPULAR_MOVIES.replaceWithMyApiKey()
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
@@ -34,6 +34,5 @@ class Networking {
             }
         
         }.resume()
-        
     }
 }
