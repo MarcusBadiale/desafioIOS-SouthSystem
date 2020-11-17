@@ -35,4 +35,30 @@ class Networking {
         
         }.resume()
     }
+    
+    func fetchMoveCasting(movieId: Int, completion: @escaping (Result<[Cast], Error>) -> ()) {
+        
+        let apiString = API.API_MOVIE_CASTING.replaceWithMyApiKey()
+        let urlString = apiString.replaceMovieId(movieId: movieId)
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, resp, err) in
+            
+            if let err = err {
+                completion(.failure(err))
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let response = try JSONDecoder().decode(Movie.self, from: data)
+                let casting = response.casting
+                completion(.success(casting!))
+            } catch let jsonError {
+                completion(.failure(jsonError))
+            }
+        
+        }.resume()
+    }
 }

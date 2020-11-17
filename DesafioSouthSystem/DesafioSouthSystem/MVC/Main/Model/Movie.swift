@@ -14,7 +14,8 @@ struct Movie: Decodable{
     var rating: Double?
     var overview: String?
     var posterPath: String?
-    var genres: [Genre]?
+    var backdropPath: String?
+    var casting: [Cast]?
     
     var imageURL: URL? {
         guard let posterPath = posterPath else { return nil }
@@ -25,5 +26,7 @@ struct Movie: Decodable{
         case title, id, overview
         case rating = "vote_average"
         case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
+        case casting = "cast"
     }
 }

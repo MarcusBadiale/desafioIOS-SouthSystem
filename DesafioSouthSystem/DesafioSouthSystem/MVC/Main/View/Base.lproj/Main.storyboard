@@ -122,11 +122,20 @@
                     <connections>
                         <outlet property="mainActivityIndicator" destination="kvH-o5-5Zm" id="65q-Bw-Fkl"/>
                         <outlet property="mainTableView" destination="vnJ-T4-sya" id="Smf-NG-O9Z"/>
+                        <segue destination="n5B-HU-PmP" kind="showDetail" identifier="goToDetail" id="UoG-KB-AZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-201.44927536231884" y="43.526785714285715"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="5Qr-6a-iLq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="n5B-HU-PmP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vuW-EU-8rB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="44"/>
         </scene>
     </scenes>
     <resources>

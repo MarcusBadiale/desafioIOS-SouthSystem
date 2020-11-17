@@ -24,6 +24,14 @@ class ViewController: UIViewController {
         fetchMovies()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetail" {
+            if let nextVc = segue.destination as? DetailViewController {
+                
+            }
+        }
+    }
+    
     func setupOutlets() {
         self.mainTableView.delegate = self
         self.mainTableView.dataSource = self
@@ -78,6 +86,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setCell(movie: currentMovie)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //go to detail view
     }
     
 }
