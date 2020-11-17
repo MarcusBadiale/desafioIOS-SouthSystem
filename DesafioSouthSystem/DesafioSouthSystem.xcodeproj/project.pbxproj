@@ -15,6 +15,11 @@
 		ABF3D98725644E33003A7786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF3D98525644E33003A7786 /* LaunchScreen.storyboard */; };
 		ABF3D99225644E33003A7786 /* DesafioSouthSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D99125644E33003A7786 /* DesafioSouthSystemTests.swift */; };
 		ABF3D99D25644E33003A7786 /* DesafioSouthSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D99C25644E33003A7786 /* DesafioSouthSystemUITests.swift */; };
+		ABF3D9BF25645559003A7786 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D9BE25645559003A7786 /* API.swift */; };
+		ABF3D9C425645716003A7786 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D9C325645716003A7786 /* Networking.swift */; };
+		ABF3D9C92564579E003A7786 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D9C82564579E003A7786 /* Movie.swift */; };
+		ABF3D9D225645ACD003A7786 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D9D125645ACD003A7786 /* Response.swift */; };
+		ABF3D9D725645B49003A7786 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D9D625645B49003A7786 /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		ABF3D99825644E33003A7786 /* DesafioSouthSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioSouthSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF3D99C25644E33003A7786 /* DesafioSouthSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioSouthSystemUITests.swift; sourceTree = "<group>"; };
 		ABF3D99E25644E33003A7786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF3D9BE25645559003A7786 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		ABF3D9C325645716003A7786 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		ABF3D9C82564579E003A7786 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		ABF3D9D125645ACD003A7786 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		ABF3D9D625645B49003A7786 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +109,12 @@
 		ABF3D97925644E31003A7786 /* DesafioSouthSystem */ = {
 			isa = PBXGroup;
 			children = (
-				ABF3D97A25644E31003A7786 /* AppDelegate.swift */,
-				ABF3D97C25644E31003A7786 /* SceneDelegate.swift */,
-				ABF3D97E25644E31003A7786 /* ViewController.swift */,
+				ABF3D9AD25644F03003A7786 /* Networking */,
+				ABF3D9AE25644F0F003A7786 /* MVC */,
+				ABF3D9B725644F52003A7786 /* Support */,
 				ABF3D98025644E31003A7786 /* Main.storyboard */,
 				ABF3D98325644E33003A7786 /* Assets.xcassets */,
 				ABF3D98525644E33003A7786 /* LaunchScreen.storyboard */,
-				ABF3D98825644E33003A7786 /* Info.plist */,
 			);
 			path = DesafioSouthSystem;
 			sourceTree = "<group>";
@@ -126,6 +135,100 @@
 				ABF3D99E25644E33003A7786 /* Info.plist */,
 			);
 			path = DesafioSouthSystemUITests;
+			sourceTree = "<group>";
+		};
+		ABF3D9AD25644F03003A7786 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D9C325645716003A7786 /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ABF3D9AE25644F0F003A7786 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D9B325644F37003A7786 /* Detail */,
+				ABF3D9AF25644F1A003A7786 /* Main */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		ABF3D9AF25644F1A003A7786 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D9B225644F31003A7786 /* Controller */,
+				ABF3D9B125644F2D003A7786 /* View */,
+				ABF3D9B025644F25003A7786 /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ABF3D9B025644F25003A7786 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D9C82564579E003A7786 /* Movie.swift */,
+				ABF3D9D125645ACD003A7786 /* Response.swift */,
+				ABF3D9D625645B49003A7786 /* Genre.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABF3D9B125644F2D003A7786 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABF3D9B225644F31003A7786 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D97E25644E31003A7786 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABF3D9B325644F37003A7786 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D9B625644F4A003A7786 /* Controller */,
+				ABF3D9B525644F46003A7786 /* View */,
+				ABF3D9B425644F41003A7786 /* Model */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		ABF3D9B425644F41003A7786 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABF3D9B525644F46003A7786 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABF3D9B625644F4A003A7786 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABF3D9B725644F52003A7786 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3D97A25644E31003A7786 /* AppDelegate.swift */,
+				ABF3D97C25644E31003A7786 /* SceneDelegate.swift */,
+				ABF3D98825644E33003A7786 /* Info.plist */,
+				ABF3D9BE25645559003A7786 /* API.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +362,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF3D97F25644E31003A7786 /* ViewController.swift in Sources */,
+				ABF3D9C425645716003A7786 /* Networking.swift in Sources */,
+				ABF3D9C92564579E003A7786 /* Movie.swift in Sources */,
 				ABF3D97B25644E31003A7786 /* AppDelegate.swift in Sources */,
+				ABF3D9BF25645559003A7786 /* API.swift in Sources */,
 				ABF3D97D25644E31003A7786 /* SceneDelegate.swift in Sources */,
+				ABF3D9D225645ACD003A7786 /* Response.swift in Sources */,
+				ABF3D9D725645B49003A7786 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ4KUFVTZH;
-				INFOPLIST_FILE = DesafioSouthSystem/Info.plist;
+				INFOPLIST_FILE = DesafioSouthSystem/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ4KUFVTZH;
-				INFOPLIST_FILE = DesafioSouthSystem/Info.plist;
+				INFOPLIST_FILE = DesafioSouthSystem/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
