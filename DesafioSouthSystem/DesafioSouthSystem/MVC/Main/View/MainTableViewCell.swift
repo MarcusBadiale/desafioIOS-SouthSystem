@@ -16,9 +16,11 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var movieImage: UIImageView!
     
     func setCell(movie: Movie) {
+        self.movieImage.layer.cornerRadius = 15
         
         self.movieName.text = movie.title
         self.movieDescription.text = movie.overview
         self.movieRating.text = String(format: "%.2f", ceil(movie.rating ?? Double.zero))
+        self.movieImage.loadImageWithUrlString(string: API.API_FETCH_IMAGE + (movie.posterPath ?? ""))
     }
 }

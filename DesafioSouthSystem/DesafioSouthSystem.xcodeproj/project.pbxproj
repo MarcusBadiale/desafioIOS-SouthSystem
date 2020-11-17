@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB8DEC31256462FF0078BA61 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DEC30256462FF0078BA61 /* MainTableViewCell.swift */; };
 		AB8DEC3625646AB00078BA61 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DEC3525646AB00078BA61 /* ImageExtension.swift */; };
+		AB8DEC3C25648D430078BA61 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DEC3B25648D430078BA61 /* Cache.swift */; };
 		ABF3D97B25644E31003A7786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D97A25644E31003A7786 /* AppDelegate.swift */; };
 		ABF3D97D25644E31003A7786 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D97C25644E31003A7786 /* SceneDelegate.swift */; };
 		ABF3D97F25644E31003A7786 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3D97E25644E31003A7786 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		AB8DEC30256462FF0078BA61 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		AB8DEC3525646AB00078BA61 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		AB8DEC3B25648D430078BA61 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		ABF3D97725644E31003A7786 /* DesafioSouthSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioSouthSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF3D97A25644E31003A7786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABF3D97C25644E31003A7786 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB8DEC3A25648D370078BA61 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				AB8DEC3B25648D430078BA61 /* Cache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		ABF3D96E25644E31003A7786 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		ABF3D97925644E31003A7786 /* DesafioSouthSystem */ = {
 			isa = PBXGroup;
 			children = (
+				AB8DEC3A25648D370078BA61 /* Cache */,
 				ABF3D9AD25644F03003A7786 /* Networking */,
 				ABF3D9AE25644F0F003A7786 /* MVC */,
 				ABF3D9B725644F52003A7786 /* Support */,
@@ -371,6 +382,7 @@
 				AB8DEC31256462FF0078BA61 /* MainTableViewCell.swift in Sources */,
 				ABF3D9C425645716003A7786 /* Networking.swift in Sources */,
 				AB8DEC3625646AB00078BA61 /* ImageExtension.swift in Sources */,
+				AB8DEC3C25648D430078BA61 /* Cache.swift in Sources */,
 				ABF3D9C92564579E003A7786 /* Movie.swift in Sources */,
 				ABF3D97B25644E31003A7786 /* AppDelegate.swift in Sources */,
 				ABF3D9BF25645559003A7786 /* API.swift in Sources */,
