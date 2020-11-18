@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail-->
+        <!--Detail View Controller-->
         <scene sceneID="FEz-8S-7Bi">
             <objects>
-                <viewController title="Detail" id="p9S-vJ-8Xt" customClass="DetailViewController" customModule="DesafioSouthSystem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p9S-vJ-8Xt" customClass="DetailViewController" customModule="DesafioSouthSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I22-Ge-6Ib">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wna-6s-kJt">
                                         <rect key="frame" x="30" y="20" width="224.5" height="61"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuN-iX-MgP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuN-iX-MgP">
                                                 <rect key="frame" x="0.0" y="0.0" width="132.5" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                 <nil key="textColor"/>
@@ -76,7 +76,7 @@
                                         </constraints>
                                         <collectionViewLayout key="collectionViewLayout" id="BOu-Am-1P6"/>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1fx-gb-s8W">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1fx-gb-s8W" customClass="CastingCollectionViewCell" customModule="DesafioSouthSystem" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="126"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vUG-mt-N6T">
@@ -104,6 +104,10 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="130" height="126"/>
+                                                <connections>
+                                                    <outlet property="actorImage" destination="trw-FW-7vw" id="2Hi-cM-rxF"/>
+                                                    <outlet property="actorName" destination="JSs-xK-EVW" id="vBb-XG-X0J"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -114,6 +118,7 @@
                                     <constraint firstItem="Wna-6s-kJt" firstAttribute="top" secondItem="vNM-W4-SgQ" secondAttribute="top" constant="20" id="GPn-c2-lwj"/>
                                     <constraint firstItem="1vB-Fs-I6c" firstAttribute="leading" secondItem="vNM-W4-SgQ" secondAttribute="leading" constant="20" id="Hzr-Vk-3yL"/>
                                     <constraint firstItem="Wna-6s-kJt" firstAttribute="leading" secondItem="vNM-W4-SgQ" secondAttribute="leading" constant="30" id="Loa-sH-Em4"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wna-6s-kJt" secondAttribute="trailing" constant="10" id="RMW-v4-NP5"/>
                                     <constraint firstItem="1vB-Fs-I6c" firstAttribute="top" secondItem="UbV-3g-8JK" secondAttribute="bottom" constant="10" id="dhS-yu-hhL"/>
                                     <constraint firstAttribute="bottom" secondItem="1vB-Fs-I6c" secondAttribute="bottom" constant="20" id="gUN-r3-Bzt"/>
                                     <constraint firstAttribute="trailing" secondItem="1vB-Fs-I6c" secondAttribute="trailing" constant="20" id="lMD-YQ-ZXY"/>
@@ -136,6 +141,19 @@
                             <constraint firstItem="Ycj-KC-IJd" firstAttribute="top" secondItem="I22-Ge-6Ib" secondAttribute="top" id="v7E-zZ-qYd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="castingCollectionView" destination="1vB-Fs-I6c" id="0yd-UT-rDe"/>
+                        <outlet property="movieImage" destination="Ycj-KC-IJd" id="GwH-Zm-vCj"/>
+                        <outlet property="movieOverview" destination="UbV-3g-8JK" id="lWd-2f-CCv"/>
+                        <outlet property="movieRating" destination="7Pi-5M-S4a" id="yEb-Mt-igV"/>
+                        <outlet property="movieTitle" destination="DuN-iX-MgP" id="N2c-Tw-g2m"/>
+                        <outlet property="roundedBackgroundView" destination="vNM-W4-SgQ" id="EId-gp-FoK"/>
+                        <outletCollection property="ratingStars" destination="zyA-hg-1ue" collectionClass="NSMutableArray" id="pSa-qh-Jzx"/>
+                        <outletCollection property="ratingStars" destination="bZ0-Vg-nvw" collectionClass="NSMutableArray" id="qgD-pm-em6"/>
+                        <outletCollection property="ratingStars" destination="Pyd-wa-bRu" collectionClass="NSMutableArray" id="ffO-2c-SHL"/>
+                        <outletCollection property="ratingStars" destination="WBE-uR-GBX" collectionClass="NSMutableArray" id="4eh-WZ-dJC"/>
+                        <outletCollection property="ratingStars" destination="aR6-7u-FFa" collectionClass="NSMutableArray" id="a7q-Cf-oIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aac-Rv-8bm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

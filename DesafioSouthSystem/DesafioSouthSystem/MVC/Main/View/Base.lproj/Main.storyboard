@@ -132,7 +132,7 @@
         <!--Detail-->
         <scene sceneID="5Qr-6a-iLq">
             <objects>
-                <viewControllerPlaceholder storyboardName="Detail" id="n5B-HU-PmP" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Detail" storyboardName="Detail" id="n5B-HU-PmP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuW-EU-8rB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="505" y="44"/>
