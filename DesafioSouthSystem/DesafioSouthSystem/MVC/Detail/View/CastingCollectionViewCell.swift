@@ -20,6 +20,9 @@ class CastingCollectionViewCell: UICollectionViewCell {
     func setCell(cast: Cast) {
         self.actorName.text = cast.name
         self.actorImage.layer.cornerRadius = 40
+        self.actorImage.layer.borderColor = UIColor.black.cgColor
+        self.actorImage.layer.masksToBounds = true
+        self.actorImage.layer.borderWidth = 1
         self.actorImage.loadImageWithUrlString(string: API.API_FETCH_IMAGE + (cast.image ?? ""))
     }
 }

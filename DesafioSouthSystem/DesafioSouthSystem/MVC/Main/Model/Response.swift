@@ -10,9 +10,11 @@ import Foundation
 struct Response: Decodable {
     
     var movies: [Movie]?
+    var casting: [Cast]?
     
     private enum CodingKeys: String, CodingKey{
         case movies = "results"
+        case casting = "cast"
     }
     
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wc2-Ig-Th8">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="wc2-Ig-Th8" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="UjY-mk-dXP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,25 +29,25 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DesafioSouthSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-T4-sya">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="191" id="MKn-8v-Wat" customClass="MainTableViewCell" customModule="DesafioSouthSystem" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="191"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKn-8v-Wat" id="dDr-Fj-7Sw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="5cX-zF-RIY">
-                                                    <rect key="frame" x="20" y="21" width="103.5" height="149"/>
+                                                    <rect key="frame" x="20" y="21" width="80" height="149"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0sj-H5-0ay">
-                                                    <rect key="frame" x="135.5" y="21" width="258.5" height="149"/>
+                                                    <rect key="frame" x="112" y="21" width="188" height="149"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxm-Gg-MHa">
                                                             <rect key="frame" x="0.0" y="0.0" width="95" height="20.5"/>
@@ -56,7 +56,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movie description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECp-HQ-40U">
-                                                            <rect key="frame" x="0.0" y="36.5" width="258.5" height="76"/>
+                                                            <rect key="frame" x="0.0" y="36.5" width="188" height="76"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>

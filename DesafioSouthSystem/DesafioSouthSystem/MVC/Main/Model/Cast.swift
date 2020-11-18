@@ -14,7 +14,8 @@ struct Cast: Decodable{
     var image: String?
     
     private enum CodingKeys: String, CodingKey {
-        case id, name
+        case id
+        case name = "original_name"
         case image = "profile_path"
     }
 }

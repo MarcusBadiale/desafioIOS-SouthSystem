@@ -32,9 +32,13 @@ extension UIImageView {
                 
                 let imageToCache = UIImage(data: data)
                 
-                Cache.imageCache.setObject(imageToCache!, forKey: string as NSString)
-                
-                self.image = imageToCache
+                if let imageToCache = imageToCache {
+                    Cache.imageCache.setObject(imageToCache, forKey: string as NSString)
+                    
+                    self.image = imageToCache
+                } else {
+                    self.image = UIImage(named: "imagePlaceholder")
+                }
             }
         }.resume()
     }

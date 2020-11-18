@@ -52,7 +52,7 @@ class Networking {
             guard let data = data else { return }
             
             do {
-                let response = try JSONDecoder().decode(Movie.self, from: data)
+                let response = try JSONDecoder().decode(Response.self, from: data)
                 let casting = response.casting
                 completion(.success(casting!))
             } catch let jsonError {

@@ -21,10 +21,14 @@ class DetailViewController: UIViewController {
     
     //Variables
     var movie: Movie?
+    var casting = [Cast]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupOutlets()
+        self.setupOutlets()
+        self.fetchCasting()
+        self.calculateStarCount()
+        print(ratingStars!)
     }
     
     func setupOutlets() {
@@ -34,8 +38,54 @@ class DetailViewController: UIViewController {
         self.movieRating.text = String(format: "%.2f", ceil(movie?.rating ?? Double.zero))
         self.movieImage.loadImageWithUrlString(string: API.API_FETCH_IMAGE + (movie?.backdropPath ?? ""))
         self.roundedBackgroundView.layer.cornerRadius = 40
+        
+        self.castingCollectionView.delegate = self
+        self.castingCollectionView.dataSource = self
+    }
+    
+    func fetchCasting() {
+        
+        Networking.shared.fetchMoveCasting(movieId: self.movie?.id ?? 0) { (result) in
+            switch result {
+            case .failure(let err):
+                self.castingCollectionView.removeFromSuperview()
+                print(err)
+
+            case .success(let casting):
+                self.casting = casting
+                print(casting)
+                self.reloadCollection()
+            }
+        }
     }
     
     func calculateStarCount() {
+        
+        let newRating = Int(self.movie?.rating ?? 0) / 2
+        
+        for i in 0...newRating {
+            ratingStars[i].image = UIImage(systemName: "star.fill")
+        }
+    }
+    
+    func reloadCollection() {
+        DispatchQueue.main.async {
+            self.castingCollectionView.reloadData()
+        }
+    }
+}
+
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.casting.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = castingCollectionView.dequeueReusableCell(withReuseIdentifier: "castingCell", for: indexPath) as! CastingCollectionViewCell
+        
+        cell.setCell(cast: casting[indexPath.row])
+        
+        return cell
     }
 }

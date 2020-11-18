@@ -17,11 +17,6 @@ struct Movie: Decodable{
     var backdropPath: String?
     var casting: [Cast]?
     
-    var imageURL: URL? {
-        guard let posterPath = posterPath else { return nil }
-        return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath)")
-    }
-    
     private enum CodingKeys: String, CodingKey {
         case title, id, overview
         case rating = "vote_average"
